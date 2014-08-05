@@ -6,6 +6,7 @@ module.exports = function (point1, distance, bearing, units) {
     var coordinates1 = point1.geometry.coordinates
     var longitude1 = toRad(coordinates1[0])
     var latitude1 = toRad(coordinates1[1])
+    var bearing_rad = toRad(bearing)
 
     var R = 0
     switch (units) {
@@ -24,8 +25,8 @@ module.exports = function (point1, distance, bearing, units) {
     }
 
     var latitude2 = Math.asin(Math.sin(latitude1) * Math.cos(distance / R) +
-        Math.cos(latitude1) * Math.sin(distance / R) * Math.cos(bearing));
-    var longitude2 = longitude1 + Math.atan2(Math.sin(bearing) * Math.sin(distance / R) * Math.cos(latitude1),
+        Math.cos(latitude1) * Math.sin(distance / R) * Math.cos(bearing_rad));
+    var longitude2 = longitude1 + Math.atan2(Math.sin(bearing_rad) * Math.sin(distance / R) * Math.cos(latitude1),
         Math.cos(distance / R) - Math.sin(latitude1) * Math.sin(latitude2));
 
     return point(toDeg(longitude2), toDeg(latitude2))
