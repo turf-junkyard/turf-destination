@@ -15,7 +15,7 @@ npm install turf-destination
 |name|description|
 |---|---|
 |point1|point feature|
-|distance|point feature|
+|distance|distance units|
 |bearing|number (-180 - 180)|
 |units|'miles' or 'kilometers'|
 
