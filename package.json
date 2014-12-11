@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/turfjs/turf-destination",
   "devDependencies": {
+    "benchmark": "^1.0.0",
     "tape": "^2.13.3",
     "turf-distance": "^0.1.4"
   },
