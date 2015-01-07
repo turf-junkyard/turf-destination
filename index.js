@@ -2,6 +2,23 @@
 //http://www.movable-type.co.uk/scripts/latlong.html
 var point = require('turf-point');
 
+/**
+ * Calculates the destination point given one point feature, distance in degrees, radians, miles, or kilometers, and bearing in degrees. This uses the haversine formula to account for global curvature.
+ *
+ * @module turf/destination
+ * @param {Point} start
+ * @param {number} distance
+ * @param {number} bearing ranging from -180 to 180
+ * @param {string} units either miles or kilometers
+ * @returns {Point} endpoint
+ * @example
+ * var point1 = turf.point(-75.343, 39.984)
+ * var distance = 100
+ * var bearing = 90
+ * var units = 'miles' // or 'kilometers', 'degrees', 'radians'
+ * var destination = turf.destination(point1, distance, bearing, units)
+ * console.log(destination)
+ */
 module.exports = function (point1, distance, bearing, units) {
     var coordinates1 = point1.geometry.coordinates;
     var longitude1 = toRad(coordinates1[0]);
