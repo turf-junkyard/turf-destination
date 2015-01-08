@@ -17,7 +17,9 @@ var point = require('turf-point');
  * var bearing = 90
  * var units = 'miles' // or 'kilometers', 'degrees', 'radians'
  * var destination = turf.destination(point1, distance, bearing, units)
- * console.log(destination)
+ * point1.properties['marker-color'] = '#f00';
+ * destination.properties['marker-color'] = '#0f0';
+ * //=turf.featurecollection([point1, destination])
  */
 module.exports = function (point1, distance, bearing, units) {
     var coordinates1 = point1.geometry.coordinates;
