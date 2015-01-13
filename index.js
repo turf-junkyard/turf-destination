@@ -3,7 +3,7 @@
 var point = require('turf-point');
 
 /**
- * Calculates the destination point given one point feature, distance in degrees, radians, miles, or kilometers, and bearing in degrees. This uses the haversine formula to account for global curvature.
+ * Calculates the destination point given a {@link Point} feature; distance in degrees, radians, miles, or kilometers; and bearing in degrees. This uses the [Haversine formula](http://en.wikipedia.org/wiki/Haversine_formula) to account for global curvature.
  *
  * @module turf/destination
  * @param {Point} start
