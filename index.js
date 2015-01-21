@@ -52,7 +52,7 @@ module.exports = function (point1, distance, bearing, units) {
     var longitude2 = longitude1 + Math.atan2(Math.sin(bearing_rad) * Math.sin(distance / R) * Math.cos(latitude1),
         Math.cos(distance / R) - Math.sin(latitude1) * Math.sin(latitude2));
 
-    return point(toDeg(longitude2), toDeg(latitude2));
+    return point([toDeg(longitude2), toDeg(latitude2)]);
 };
 
 function toRad(degree) {
