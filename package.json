@@ -26,10 +26,10 @@
   "homepage": "https://github.com/turfjs/turf-destination",
   "devDependencies": {
     "benchmark": "^1.0.0",
-    "tape": "^3.0.3",
-    "turf-distance": "^0.1.5"
+    "tape": "^3.4.0",
+    "turf-distance": "^1.0.0"
   },
   "dependencies": {
-    "turf-point": "^1.2.0"
+    "turf-point": "^2.0.0"
   }
 }
