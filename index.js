@@ -12,7 +12,7 @@ var point = require('turf-point');
  * @param {String} units miles, kilometers, degrees, or radians
  * @returns {Point} a {@link Point} feature at the destination
  * @example
- * var point1 = turf.point(-75.343, 39.984);
+ * var point1 = turf.point([-75.343, 39.984]);
  * var distance = 50;
  * var bearing = 90;
  * var units = 'miles';
