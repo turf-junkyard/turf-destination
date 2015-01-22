@@ -3,14 +3,14 @@
 var point = require('turf-point');
 
 /**
- * Calculates the destination point given a {@link Point} feature; distance in degrees, radians, miles, or kilometers; and bearing in degrees. This uses the [Haversine formula](http://en.wikipedia.org/wiki/Haversine_formula) to account for global curvature.
+ * Takes a {@link Point} feature and calculates the location of a destination point given a distance in degrees, radians, miles, or kilometers; and bearing in degrees. This uses the [Haversine formula](http://en.wikipedia.org/wiki/Haversine_formula) to account for global curvature.
  *
  * @module turf/destination
  * @param {Point} start a Point feature at the starting point
  * @param {Number} distance distance from the starting point
  * @param {Number} bearing ranging from -180 to 180
  * @param {String} units miles, kilometers, degrees, or radians
- * @returns {Point} a {@link Point} feature at the destination
+ * @returns {Point} a Point feature at the destination
  * @example
  * var point1 = turf.point([-75.343, 39.984]);
  * var distance = 50;
@@ -18,8 +18,8 @@ var point = require('turf-point');
  * var units = 'miles';
  *
  * var destination = turf.destination(point1, distance, bearing, units);
- * point1.properties['marker-color'] = '#f00';
- * destination.properties['marker-color'] = '#0f0';
+ * point1.properties['marker-color'] = '#0f0';
+ * destination.properties['marker-color'] = '#f00';
  *
  * var result = turf.featurecollection([point1, destination]);
  *
