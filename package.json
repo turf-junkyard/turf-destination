@@ -4,11 +4,12 @@
   "description": "turf destination module",
   "main": "index.js",
   "scripts": {
-    "test": "tape test.js"
+    "test": "tape test.js",
+    "doc": "dox -r < index.js | doxme --readme > README.md"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/turfjs/turf-destination.git"
+    "url": "https://github.com/Turfjs/turf-destination.git"
   },
   "keywords": [
     "turf",
@@ -21,13 +22,15 @@
   "author": "jvrousseau",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/turfjs/turf-destination/issues"
+    "url": "https://github.com/Turfjs/turf-destination/issues"
   },
-  "homepage": "https://github.com/turfjs/turf-destination",
+  "homepage": "https://github.com/Turfjs/turf-destination",
   "devDependencies": {
     "benchmark": "^1.0.0",
     "tape": "^3.4.0",
-    "turf-distance": "^1.0.0"
+    "turf-distance": "^1.0.0",
+    "dox": "^0.6.1",
+    "doxme": "^1.4.2"
   },
   "dependencies": {
     "turf-point": "^2.0.0"
