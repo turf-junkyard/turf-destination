@@ -12,16 +12,27 @@ var point = require('turf-point');
  * @param {String} units miles, kilometers, degrees, or radians
  * @returns {Point} a Point feature at the destination
  * @example
- * var point1 = turf.point([-75.343, 39.984]);
+ * var point = {
+ *   "type": "Feature",
+ *   "properties": {
+ *     "marker-color": "#0f0"
+ *   },
+ *   "geometry": {
+ *     "type": "Point",
+ *     "coordinates": [-75.343, 39.984]
+ *   }
+ * };
  * var distance = 50;
  * var bearing = 90;
  * var units = 'miles';
  *
- * var destination = turf.destination(point1, distance, bearing, units);
- * point1.properties['marker-color'] = '#0f0';
+ * var destination = turf.destination(point, distance, bearing, units);
  * destination.properties['marker-color'] = '#f00';
  *
- * var result = turf.featurecollection([point1, destination]);
+ * var result = {
+ *   "type": "FeatureCollection",
+ *   "features": [point, destination]
+ * };
  *
  * //=result
  */
