@@ -47,16 +47,16 @@ module.exports = function (point1, distance, bearing, units) {
     switch (units) {
     case 'miles':
         R = 3960;
-        break
+        break;
     case 'kilometers':
         R = 6373;
-        break
+        break;
     case 'degrees':
         R = 57.2957795;
-        break
+        break;
     case 'radians':
         R = 1;
-        break
+        break;
     }
 
     var latitude2 = Math.asin(Math.sin(latitude1) * Math.cos(distance / R) +
