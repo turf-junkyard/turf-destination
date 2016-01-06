@@ -1,11 +1,13 @@
 var test = require('tape');
-var distance = require('turf-distance');
 var destination = require('./');
 
-test('destination', function(t){
+test('destination', function (t) {
   var pt1 = {
-    "type": "Feature",
-    "geometry": {"type": "Point", "coordinates": [-75.0, 39.0]}
+    'type': 'Feature',
+    'geometry': {
+      'type': 'Point',
+      'coordinates': [-75.0, 39.0]
+    }
   };
   var dist = 100;
   var bear = 180;
