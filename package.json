@@ -1,11 +1,28 @@
 {
   "name": "turf-destination",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "description": "turf destination module",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint index.js test.js",
+    "pretest": "npm run lint",
     "test": "tape test.js",
     "doc": "dox -r < index.js | doxme --readme > README.md"
+  },
+  "eslintConfig": {
+    "extends": "mourner",
+    "rules": {
+      "strict": [
+        1
+      ],
+      "indent": [
+        2,
+        2,
+        {
+          "SwitchCase": 1
+        }
+      ]
+    }
   },
   "repository": {
     "type": "git",
@@ -27,10 +44,12 @@
   "homepage": "https://github.com/Turfjs/turf-destination",
   "devDependencies": {
     "benchmark": "^1.0.0",
-    "tape": "^3.5.0",
-    "turf-distance": "^1.0.0",
     "dox": "^0.6.1",
-    "doxme": "^1.4.3"
+    "doxme": "^1.4.3",
+    "eslint": "^1.10.3",
+    "eslint-config-mourner": "^1.0.1",
+    "tape": "^3.5.0",
+    "turf-distance": "^1.0.0"
   },
   "dependencies": {
     "turf-point": "^2.0.0"
